@@ -4,6 +4,8 @@
 以两个下划线开头或以下划线和大写字母开头的名称被保留给实现（编译器及其使用起源）  
 以一个下划线开头的名称将保留给实现，用作全局标识符  
 #### 整形（*char属于整形*）、浮点型
+bool、char、signed char、unsigned char、short、unsigned short、int、unsigned int、long、unsigned long、wchar_t  
+short至少为16位，int至少和short一样长，long至少32位，且至少和int一样长，确切长度取决于实现。  
 ```cpp
 #include <iostream>
 {
