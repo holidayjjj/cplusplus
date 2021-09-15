@@ -53,3 +53,5 @@ auto w = 0;   //int
 std::vector<double> scores;
 std::vector<double>::iterator pv = scores.begin();    //C++98
 auto pv = scores.begin();    //C++11
+```
+## 复合类型
