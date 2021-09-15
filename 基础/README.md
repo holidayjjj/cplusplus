@@ -55,3 +55,20 @@ std::vector<double>::iterator pv = scores.begin();    //C++98
 auto pv = scores.begin();    //C++11
 ```
 ## 复合类型
+#### 数组
+```cpp
+typeName arrayName[arraySize];
+int cards[4] = {3, 6, 8, 10};   //okay
+int hand[4]                     //okay
+hand[4] = {5, 6, 7, 90};        //not allowed
+hand = cards;                   //not allowed
+double earnings[4] {1.2e4, 1.6e4, 1.1e4, 1.7e4};    //okay with C++11
+unsigned int counts[10] = {};       //all elements set to 0
+long plifs[] = {25, 92, 3.0};       //not allowed
+char slifs[4] {'h', 'i', 1122011, '\0'};      //not allowed
+```
+只有在定义数组时才能初始化，如果只对数组的一部分进行初始化，则编译器把其他元素设置为0；  
+可不在大括号内包含任何东西，将把所有元素都设置为0；  
+列表初始化禁止缩窄转换。  
+#### 字符串
+```
