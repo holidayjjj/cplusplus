@@ -114,4 +114,13 @@ enum  spectrum {red, orange, yellow, green, blue, violet, indigo, ultraviolet};
  ```
  enum提供了另一种创建符号常量的方式，这种方式可以替代const；  
  枚举值默认第一个为0，后面的枚举量的值比前一个大1；枚举的取之范围。  
- 
+ #### 数组替代品
+ ```cpp
+ vector<int> vi;
+ vector<double> vd(n);
+ vector<typeName> vt(n_elem);
+ array<int,5> ai;
+ array<double,4> ad = {1.2, 2.1, 3.43, 4.3};
+ ```
+ vector是一种动态数组，包含在std名称空间中；  
+ array对象的长度固定，使用栈（静态内存分配），其效率与数组相同，提供了类方法。
