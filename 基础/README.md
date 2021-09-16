@@ -71,4 +71,47 @@ char slifs[4] {'h', 'i', 1122011, '\0'};      //not allowed
 可不在大括号内包含任何东西，将把所有元素都设置为0；  
 列表初始化禁止缩窄转换。  
 #### 字符串
+注意'\n'，string类使用；  
+注意cin>>、get()、getline()区别；  
+除char类型外、还有wchar_t、char16_t、char32_t，分别用L、u和U表示；  
+原始raw字符串使用\"(和)\"用作定界符，并使用前缀R来标识原始字符串。
+```cpp
+wchar_t title[] = L"Chief Astrogator";
+char16_t name[] = u"Felonia Ripova";
+cout<<R"(Jim "King" Tutt uses "\n" instead of endl.)" <<endl;
+cout<< R"+*(Who wouldn't?)", she whispered.)+*"<<endl;
 ```
+#### 结构简介
+```cpp
+struct inflatable
+{
+  char name[20];
+  float volume;
+  double price;
+ };
+ inflatable duck = {"Daphne", 0.12, 9.98};
+ inflatable mayer{};        //全部被设置为0
+ ```
+ 使用(.)来访问各个成员；结构中的位字段；  
+ 结构与类的区别在与默认访问是公有的。  
+ #### 共用体
+ 共用体是一种数据格式，它能够存储不同的数据类型，但只能同时存储其中的一种类型
+ ```cpp
+ union one4all
+ {
+    int int_val;
+    long long_val;
+    double double_val;
+ };
+ one4all pail;
+ pail.int_val = 15;
+ pail.double_val = 1.38;
+ ```
+ 共用体的长度为其最大成员的长度，常用于节省内存。
+ #### 枚举
+  ```cpp
+enum  spectrum {red, orange, yellow, green, blue, violet, indigo, ultraviolet};
+ ```
+ enum提供了另一种创建符号常量的方式，这种方式可以替代const；  
+ 枚举值默认第一个为0，后面的枚举量的值比前一个大1；枚举的取之范围。  
+ 
